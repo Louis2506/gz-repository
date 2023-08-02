@@ -56,4 +56,11 @@ models:
         - name: ads_cost_total
           tests:
             -  not_null
+    - name : finance
+      description: One line by date
+      columns:
+        - name: date_date
+          tests:
+            - unique
+            - not_null
                 
