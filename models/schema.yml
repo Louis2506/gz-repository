@@ -48,7 +48,7 @@ models:
       description: One line by campaign_name (campaign_name can have several paid_source) & Ads_costs informations
       tests:
         - unique:
-            column_name: "(campaign_name || '-' || paid_source)"
+            column_name: "(campaign_name || '-' || paid_source || '-' || date_date)"
       columns:
         - name: campaign_name
           tests:
