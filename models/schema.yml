@@ -44,3 +44,16 @@ models:
         - name: operational_margin
           tests:
             - not_null
+    - name: int_campaign
+      description: One line by campaign_name (campaign_name can have several paid_source) & Ads_costs informations
+      tests:
+        - unique:
+            column_name: "(campaign_name || '-' || paid_source)"
+      columns:
+        - name: campaign_name
+          tests:
+            - not_null
+        - name: ads_cost_total
+          tests:
+            -  not_null
+                
